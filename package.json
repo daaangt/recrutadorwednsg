@@ -1,0 +1,19 @@
+{
+  "name": "Recrutador",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "express": "^4.17.1",
+    "map": "^1.0.1",
+    "node-fetch": "^2.6.0",
+    "snekfetch": "^4.0.4"
+  }
+}
