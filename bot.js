@@ -7,10 +7,6 @@ let status = ['Recrutando', 'WE DO NOT SOW GREYJOY'];
 
 client.on("ready", () => {
     console.log(`O Recrutador conectou-se com sucesso ao servidor de WE DO NOT SOW GREYJOY`);
-    setInterval(function() {
-        let statuses = status[Math.floor(Math.random()*status.length)];
-        client.user.setActivity(statuses, { type: 'WATCHING' });
-    }, 10000);    
 });
 
 client.on("guildCreate", guild => {
