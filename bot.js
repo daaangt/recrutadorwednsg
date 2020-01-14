@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require("./config.json");
 const snekfetch = require("snekfetch");
@@ -13,7 +13,7 @@ client.on("guildCreate", guild => {
     console.log(`O Recrutador entrou no servidor ${guild.name} (id: ${guild.id}). População: ${guild.memberCount} membros!`);
 });
 
-client.on("message", async message => {
+/*client.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
     
@@ -44,6 +44,6 @@ client.on("message", async message => {
             }
         });
     }
-});
+});*/
 
 client.login('NjM0NjAxNzg3Mjk0NDgyNDMy.Xh1XGw.5gOdPCeFf8fb8hxucUkqSswyURs');
