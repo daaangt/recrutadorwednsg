@@ -21,6 +21,7 @@ client.on("message", async message => {
     const command = args.shift().toLowerCase();
     if(command === "call") {
         message.guild.createchannel("MAIN SHOTCALLER", "voice");
+        message.channel.send(`Debug - 01`); 
     }
     if(command === "registrar") {
         const gametag = args.join(" ");
