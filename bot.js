@@ -19,7 +19,9 @@ client.on("message", async message => {
     
     const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
-
+    if(command === "call") {
+        message.guild.createchannel("MAIN SHOTCALLER", "voice");
+    }
     if(command === "registrar") {
         const gametag = args.join(" ");
         if(!gametag) return message.channel.send(`Para se registrar você precisa utilizar o comando !registrar <gametag do albion>`);
