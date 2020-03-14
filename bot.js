@@ -20,7 +20,7 @@ client.on("message", async message => {
     const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
     if(command === "call") {
-        message.guild.createchannel("MAIN SHOTCALLER", "voice");
+        message.guild.createchannel(`MAIN SHOTCALLER`, `voice`);
         message.channel.send(`Debug - 01`); 
     }
     if(command === "registrar") {
