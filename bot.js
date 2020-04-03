@@ -28,8 +28,10 @@ client.on("message", async message => {
         snekfetch.get("https://gameinfo.albiononline.com/api/gameinfo/events/74296058").then(r => {
             let body = r.body;
             
-            if(body.Victim.AverageItemPower >= 1300)_
-                message.channel.send(`O jogador tem 1300+`);      
+            if(body.Victim.AverageItemPower >= 1300)
+                message.channel.send(`O jogador tem 1300+`); 
+            else
+                message.channel.send(${body.Victim.AverageItemPower}); 
             /*else
             {
                 m.edit(`Seja bem-vindo, ${gametag}, você foi confirmado como um dos nosso membros!`);  
