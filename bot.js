@@ -23,6 +23,29 @@ client.on("message", async message => {
         message.guild.createchannel(`MAIN SHOTCALLER`, `voice`);
         message.channel.send(`Debug - 01`); 
     }
+    if(command === "regear") 
+    {
+        snekfetch.get("https://gameinfo.albiononline.com/api/gameinfo/events/74296058").then(r => {
+            let body = r.body;
+            
+            if(body.Victim.AverageItemPower >= 1300)_
+                message.channel.send(`O jogador tem 1300+`);      
+            /*else
+            {
+                m.edit(`Seja bem-vindo, ${gametag}, você foi confirmado como um dos nosso membros!`);  
+
+                let servidor = client.guilds.get("365576164267524096");
+                let membro = servidor.members.get(message.author.id);
+                let cargo = servidor.roles.get("589492367812460544");   
+
+                if(membro.roles.has(cargo) || message.member.hasPermission("ADMINISTRATOR")) 
+                    return; 
+                    
+                message.member.setNickname(gametag);             
+                membro.addRole(cargo);
+            }*/
+        });    
+    }
     if(command === "registrar") {
         const gametag = args.join(" ");
         if(!gametag) return message.channel.send(`Para se registrar você precisa utilizar o comando !registrar <gametag do albion>`);
